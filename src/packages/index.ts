@@ -53,3 +53,4 @@ export const create = <T>(initStateFn: InitStateFn) => {
   return useBoundStore;
 };
 
+export { default as hello } from './helleo'; 
