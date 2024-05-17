@@ -1,7 +1,7 @@
 import { useSyncExternalStoreWithSelector } from 'use-sync-external-store/shim/with-selector';
 
-type InitStateFn = (state: any) => void;
-type Listener = (
+export type InitStateFn = (state: any) => void;
+export type Listener = (
   state: Record<string, any>,
   prevState: Record<string, any>
 ) => void;
