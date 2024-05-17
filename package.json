@@ -3,12 +3,18 @@
   "description": "简易版zustand",
   "version": "0.0.1",
   "type": "module",
-  "main": "./dist/dsl-zustand.umd.cjs",
-  "module": "./dist/dsl-zustand.js",
-  "typings": "./dist/index.d.ts",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "lib",
+    "es",
+    "dist"
+  ],
+  "typings": "es/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "clean": "rimraf lib es dist",
+    "build": "npm run clean && tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -20,7 +26,6 @@
     "use-sync-external-store": "^1.2.2"
   },
   "devDependencies": {
-    "@rollup/plugin-typescript": "^11.1.6",
     "@types/node": "^20.12.12",
     "@types/react": "^18.3.2",
     "@types/react-dom": "^18.3.0",
@@ -34,8 +39,10 @@
     "path": "^0.12.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "rimraf": "^5.0.7",
     "tslib": "^2.6.2",
     "typescript": "^5.2.2",
-    "vite": "^5.2.11"
+    "vite": "^5.2.11",
+    "vite-plugin-build": "^0.10.0"
   }
 }
