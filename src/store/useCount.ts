@@ -1,4 +1,4 @@
-import { create } from './../../packages';
+import { create } from '@/packages';
 
 export interface CountState {
   count: number;
