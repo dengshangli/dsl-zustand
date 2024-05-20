@@ -14,13 +14,13 @@ export default defineConfig({
     buildPlugin({
       fileBuild: {
         emitDeclaration: true,
-        inputFolder: resolve("packages"),
+        inputFolder: "packages",
       },
       libBuild: {
         buildOptions: {
           rollupOptions: {
             external: ["react", "react-dom"],
-            output: { globals: { react: "react", "react-dom": "react-dom" } },
+            output: { globals: { react: "React", "react-dom": "ReactDOM" } },
           },
           lib: {
             entry: resolve("packages/index.ts"),
@@ -38,10 +38,11 @@ export default defineConfig({
     },
   },
 
-  css: {
-    modules: {
-      localsConvention: "camelCaseOnly",
-      generateScopedName: (name: string) => `dsl-${name}`,
-    },
-  },
+  /* css配置，此项目没用css，因此忽略掉 */
+  // css: {
+  //   modules: {
+  //     localsConvention: "camelCaseOnly",
+  //     generateScopedName: (name: string) => `dsl-${name}`,
+  //   },
+  // },
 });
