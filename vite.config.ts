@@ -9,11 +9,6 @@ function resolve(str: string) {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  resolve: {
-    alias: {
-      "@": resolve("./"),
-    },
-  },
   plugins: [
     react(),
     buildPlugin({
@@ -36,6 +31,12 @@ export default defineConfig({
       },
     }),
   ],
+
+  resolve: {
+    alias: {
+      "@": resolve("./"),
+    },
+  },
 
   css: {
     modules: {
