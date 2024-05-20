@@ -1,9 +1,8 @@
 {
   "name": "dsl-zustand",
   "description": "简易版zustand",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "dengshangli",
-  "type": "module",
   "main": "lib/index.js",
   "module": "es/index.js",
   "typings": "es/index.d.ts",
